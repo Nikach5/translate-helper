@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>420</width>
+    <height>560</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>სიტყვების თარგმნა</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">
+     QWidget {
+         background-color: #f9fafb;
+         font-family: 'Segoe UI', 'Tahoma', sans-serif;
+         font-size: 14px;
+         color: #1f2937;
+     }
+
+     QLabel#titleLabel {
+         font-size: 20pt;
+         font-weight: bold;
+         color: #111827;
+         margin-bottom: 10px;
+     }
+
+     QLineEdit {
+         border: 1px solid #d1d5db;
+         border-radius: 8px;
+         padding: 6px 10px;
+         background-color: white;
+     }
+
+     QComboBox {
+         border: 1px solid #d1d5db;
+         border-radius: 8px;
+         padding: 6px 10px;
+         background-color: white;
+     }
+
+     QPushButton {
+         background-color: #2563eb;
+         color: white;
+         border: none;
+         border-radius: 8px;
+         padding: 8px 16px;
+         font-weight: bold;
+     }
+
+     QPushButton:hover {
+         background-color: #1d4ed8;
+     }
+
+     QPushButton:pressed {
+         background-color: #1e40af;
+     }
+
+     QPushButton#removeFavoriteButton {
+         background-color: #dc2626;
+         color: white;
+         font-weight: 600;
+         border-radius: 8px;
+         padding: 8px 12px;
+         margin-top: 10px;
+     }
+
+     QPushButton#removeFavoriteButton:hover {
+         background-color: #b91c1c;
+     }
+
+     QPushButton#removeFavoriteButton:pressed {
+         background-color: #7f1d1d;
+     }
+
+     QCheckBox {
+         margin-top: 10px;
+     }
+
+     QLabel#translationLabel {
+         font-size: 16px;
+         font-weight: 500;
+         color: #374151;
+         padding: 10px;
+         border: 1px solid #d1d5db;
+         border-radius: 8px;
+         background-color: #ffffff;
+     }
+
+     QLabel#statusLabel {
+         font-size: 12px;
+         color: green;
+         margin-top: 8px;
+     }
+
+     QLabel#favoritesLabel {
+         font-size: 18pt;
+         font-weight: 600;
+         margin-top: 20px;
+         color: #111827;
+     }
+
+     QTableView {
+         border: 1px solid #d1d5db;
+         border-radius: 8px;
+         background-color: white;
+     }
+    </string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="contentsMargins">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>20</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="spacing">
+     <number>10</number>
+    </property>
+
+    <item>
+     <widget class="QLabel" name="titleLabel">
+      <property name="text">
+       <string>სიტყვების თარგმნა</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+
+    <item>
+     <widget class="QLineEdit" name="lineEdit">
+      <property name="placeholderText">
+       <string>ჩაწერეთ სიტყვა</string>
+      </property>
+     </widget>
+    </item>
+
+    <item>
+     <widget class="QComboBox" name="languageComboBox">
+      <item>
+       <property name="text">
+        <string>English to Spanish</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>English to French</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>English to German</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>English to Italian</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>English to Japanese</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>English to Georgian</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Georgian to English</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>French to English</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>German to English</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+
+    <item>
+     <widget class="QCheckBox" name="rememberCheckBox">
+      <property name="text">
+       <string>ფავორიტებში დამახსოვრება</string>
+      </property>
+     </widget>
+    </item>
+
+    <item>
+     <widget class="QPushButton" name="translateButton">
+      <property name="text">
+       <string>თარგმნა</string>
+      </property>
+     </widget>
+    </item>
+
+    <item>
+     <widget class="QLabel" name="translationLabel">
+      <property name="text">
+       <string></string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+
+    <item>
+     <widget class="QLabel" name="statusLabel">
+      <property name="text">
+       <string></string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+
+
+    <item>
+     <widget class="QLabel" name="favoritesLabel">
+      <property name="text">
+       <string>ფავორიტები</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+
+    <item>
+     <widget class="QTableView" name="favoritesTableView">
+      <property name="minimumHeight">
+       <number>120</number>
+      </property>
+     </widget>
+    </item>
+
+    <item>
+     <widget class="QPushButton" name="removeFavoriteButton">
+      <property name="text">
+       <string>მონიშნულის ამოშლა</string>
+      </property>
+     </widget>
+    </item>
+
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
